@@ -1,0 +1,13 @@
+.Main-Title {
+    margin-top: 34px;
+    margin-bottom: 32px;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: bold;
+}
+
+.Main-Grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 20px;
+}

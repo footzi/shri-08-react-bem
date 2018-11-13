@@ -1,0 +1,486 @@
+.Article {
+    padding-top: 25px;
+    background: #fafafa;
+    border-radius: 20px;
+    color: #333333;
+    cursor: pointer;
+    transition: 0.3s ease all;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.Article-Header {
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.Article-HeaderWrap {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.Article-HeaderWrap img {
+    width: 52px;
+    height: 52px;
+}
+
+.Article-Controls {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    right: 0;
+    top: 0;
+    height: 100%;
+    padding: 20px;
+}
+
+.Article-Controls_position_down {
+    padding-bottom: 10px;
+    padding-right: 10px;
+}
+
+.Article-Info {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 25px;
+}
+
+.Article-Close {
+    transition: 0.3s ease all;
+    transform: translateX(300%);
+    background: none;
+    padding: 0;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.Article-Link {
+    transition: 0.3s ease opacity;
+}
+
+.Article-Title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-left: 13px;
+}
+
+.Article-About {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 25px;
+}
+
+.Article-Important {
+    font-size: 24px;
+    line-height: 28px;
+}
+
+.Article-Image {
+    margin-top: 30px;
+}
+
+.Article-Image img {
+    display: block;
+    width: 100%;
+}
+
+.Article-Message {
+    font-size: 20px;
+    line-height: 23px;
+}
+
+.Article-Params {
+    margin-top: 20px;
+    display: flex;
+}
+
+.Article-ParamsItem {
+    font-size: 18px;
+    line-height: 21px;
+    margin-right: 50px;
+}
+
+.Article-ParamsItem:last-child {
+    margin-right: 10px;
+}
+
+.Article-TrackWrap {
+    display: flex;
+    margin-top: 20px;
+}
+
+.Article-TrackTitle {
+    font-size: 18px;
+    line-height: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.Article-Track {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: 15px;
+    overflow: hidden;
+}
+
+.Article-TrackControl {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Article-TrackControl span {
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+}
+
+.Article-TrackFill {
+    width: 100%;
+    height: 1px;
+    background-color: #979797;
+    position: relative;
+}
+
+.Article-TrackFill:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 18px;
+    top: 1px;
+    left: 10%;
+    transform: translateY(-50%);
+    background-color: #d8d8d8;
+    border-radius: 4.5px;
+}
+
+.Article-TrackControls {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Article-TrackDirection {
+    margin-right: 10px;
+}
+
+.Article-TrackDirectionNext {
+    transform: rotate(180deg);
+    margin-right: 20px;
+}
+
+.Article-TrackVolume {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.Article-TrackVolume span {
+    margin-left: 15px;
+    font-size: 14px;
+    line-height: 17px;
+    color: #a1a1a1;
+}
+
+.Article-TrackVolumeFill {
+    position: relative;
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: rgba(216, 216, 216, 0.3);
+}
+
+.Article-TrackVolumeFill:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 2px;
+    left: 80%;
+    transform: translateY(-50%);
+    background-color: #605757;
+    border-radius: 50%;
+}
+
+.Article-ButtonGroup {
+    margin-top: 20px;
+}
+
+.Article-Button {
+    border: 0;
+    background: #e5e5e5;
+    border-radius: 8px;
+    color: black;
+    width: 130px;
+    font-size: 20px;
+    line-height: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.b-article__touch {
+    overflow: hidden;
+}
+
+.b-article__touch img {
+    max-width: none;
+    touch-action: none;
+    width: auto;
+    position: relative;
+}
+
+.b-article__pointer {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    border-radius: 2px;
+    width: 50px;
+    height: 3px;
+    background: rgba(0,0,0,0.50);
+}
+
+.Article-Button_color_yellow {
+    background: #ffd93e;
+}
+
+/* STATE */
+.Article_size_big {
+    grid-column: 4 span;
+    grid-row: 3 span;
+}
+
+.Article_size_medium {
+    grid-column: 3 span;
+    grid-row: 2 span;
+}
+
+.Article_size_small {
+    grid-column: 2 span;
+}
+
+.Article_size_small .Article-About {
+    flex-direction: column;
+}
+
+.Article_size_small .Article-About span:first-child {
+    margin-bottom: 15px;
+}
+
+.Article_state_danger {
+    background: #db5341;
+}
+
+.Article_state_danger .Article-Header {
+    color: white;
+}
+
+.Article_state_danger .Article-Info {
+    background-color: #fafafa;
+    padding-top: 25px;
+}
+
+
+@media screen and (max-width: 669px) {
+    .Article_size_big {
+        grid-column: 6 span;
+    }
+
+    .Article_size_medium {
+        grid-column: 6 span;
+    }
+
+    .Article_size_small {
+        grid-column: 6 span;
+    }
+
+    .Article_size_small .Article-About {
+        flex-direction: row;
+    }
+
+    .b-camera {
+        grid-column: 4 span;
+    }
+}
+
+@media (min-width: 670px) and (max-width: 959px) {
+    .Article_size_big {
+        grid-column: 3 span;
+    }
+
+    .Article_size_medium {
+        grid-column: 3 span;
+    }
+
+    .Article_size_small {
+        grid-column: 3 span;
+    }
+}
+
+@media (min-width: 670px) {
+    .b-article__touch img {
+        max-width: 100%;
+    }
+    
+    .b-article__pointer {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .Article-Header {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .Article-HeaderWrap img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .Article-About {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .Article-Important {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .Article-Message {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .Article-Info {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .Article-title {
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    .Article-ParamsItem {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    .Article-TrackTitle {
+        font-size: 17px;
+        line-height: 20px;
+    }
+
+    .Article-Button {
+        width: 100px;
+    }
+
+    .Article-Link {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1919px) {
+    .l-main {
+        max-width: 1440px;
+    }
+
+    .Article_size_big {
+        grid-column: 2 span;
+    }
+
+    .Article_size_medium {
+        grid-column: 2 span;
+    }
+
+    .Article_size_small {
+        grid-column: 2 span;
+    }
+}
+
+@media screen and (min-width: 1279px) {
+    .b-article:hover {
+        background-color: #f3f3f3;
+        box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
+    }
+
+    .b-article.Article_state_danger:hover {
+        background-color: #db5341;
+    }
+
+    .b-article:hover .b-article__close {
+        transform: translateX(0);
+    }
+
+    .b-article__close:hover,
+    .Article-Link:hover {
+        opacity: 0.6;
+    }
+
+    .l-cameras {
+        height: 768px;
+    }
+
+    .l-controls {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1279px) {
+    .l-main {
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .l-title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .l-header {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0;
+    }
+
+    .l-footer {
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1439px) {
+    .l-main {
+        max-width: 1366px;
+    }
+}

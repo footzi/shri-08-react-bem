@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import Page from './components/Page/Page';
+import {mobile} from './components/Page/Page.registry/mobile';
+import {desktop} from './components/Page/Page.registry/desktop';
+import { withRegistry } from '@bem-react/di';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// let Platform = '';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const Platform = withRegistry(desktop)(Page);
+
+ReactDOM.render(<Platform />, document.getElementById('root'));
