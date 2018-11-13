@@ -11,6 +11,9 @@ import ac from './media/ac-white.svg';
 import music from './media/music.svg';
 import fridge from './media/fridge.svg';
 import battery from './media/battery.svg';
+import cam from './media/cam-white.svg';
+import vacuum from './media/Пылесос.png';
+import kettle from './media/kettle.svg';
 import './Main.css';
 
 const cnPage = cn('Page');
@@ -171,6 +174,38 @@ export default class Main extends React.Component {
                         info={
                             {
                                 message: 'Ура! Устройство «Оконный сенсор» снова в строю.',
+                            }
+                        }
+                    >
+                    </Article>
+
+                    <Article
+                        icon={cam}
+                        size='bd'
+                        title='Пылесос застрял'
+                        about={
+                            {
+                                title: 'Оконный сенсор',
+                                time: '02:20, Сегодня'
+                            }
+                        }
+                        info={
+                            {
+                                message: 'Робопылесос не смог сменить свое местоположение в течение последних 3 минут. Похоже, ему нужна помощь.',
+                                image: vacuum
+                            }
+                        }
+                    >
+                    </Article>
+
+                    <Article
+                        icon={kettle}
+                        size='s'
+                        title='Вода вскипела'
+                        about={
+                            {
+                                title: 'Чайник',
+                                time: '23:40, Сегодня'
                             }
                         }
                     >

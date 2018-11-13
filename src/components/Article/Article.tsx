@@ -44,6 +44,9 @@ const sizeClassName = (size: string):any => {
         case 'md':
             return cnArticle({size: 'medium', state: 'danger'});
             break
+        case 'bd':
+            return cnArticle({size: 'big', state: 'danger'});
+            break
         default:
         return cnArticle();
     }

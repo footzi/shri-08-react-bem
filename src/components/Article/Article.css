@@ -237,27 +237,6 @@
     margin-right: 15px;
 }
 
-.b-article__touch {
-    overflow: hidden;
-}
-
-.b-article__touch img {
-    max-width: none;
-    touch-action: none;
-    width: auto;
-    position: relative;
-}
-
-.b-article__pointer {
-    position: absolute;
-    bottom: 30px;
-    left: 0;
-    border-radius: 2px;
-    width: 50px;
-    height: 3px;
-    background: rgba(0,0,0,0.50);
-}
-
 .Article-Button_color_yellow {
     background: #ffd93e;
 }
@@ -315,10 +294,6 @@
     .Article_size_small .Article-About {
         flex-direction: row;
     }
-
-    .b-camera {
-        grid-column: 4 span;
-    }
 }
 
 @media (min-width: 670px) and (max-width: 959px) {
@@ -332,16 +307,6 @@
 
     .Article_size_small {
         grid-column: 3 span;
-    }
-}
-
-@media (min-width: 670px) {
-    .b-article__touch img {
-        max-width: 100%;
-    }
-    
-    .b-article__pointer {
-        display: none;
     }
 }
 
@@ -401,10 +366,6 @@
 }
 
 @media screen and (min-width: 1919px) {
-    .l-main {
-        max-width: 1440px;
-    }
-
     .Article_size_big {
         grid-column: 2 span;
     }
@@ -419,68 +380,21 @@
 }
 
 @media screen and (min-width: 1279px) {
-    .b-article:hover {
+    .Article:hover {
         background-color: #f3f3f3;
         box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
     }
 
-    .b-article.Article_state_danger:hover {
+    .Article.Article_state_danger:hover {
         background-color: #db5341;
     }
 
-    .b-article:hover .b-article__close {
+    .Article:hover .Article-Close {
         transform: translateX(0);
     }
 
-    .b-article__close:hover,
+    .Article-Close:hover,
     .Article-Link:hover {
         opacity: 0.6;
-    }
-
-    .l-cameras {
-        height: 768px;
-    }
-
-    .l-controls {
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-    }
-}
-
-@media screen and (max-width: 1279px) {
-    .l-main {
-        padding-right: 20px;
-        padding-left: 20px;
-        margin-bottom: 30px;
-        margin-top: 0;
-    }
-
-    .l-title {
-        font-size: 24px;
-        line-height: 28px;
-        margin-top: 0;
-        margin-bottom: 20px;
-    }
-
-    .l-header {
-        padding-right: 20px;
-        padding-left: 20px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        border-bottom: 0;
-    }
-
-    .l-footer {
-        padding-left: 20px;
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-right: 20px;
-    }
-}
-
-@media screen and (min-width: 1439px) {
-    .l-main {
-        max-width: 1366px;
     }
 }

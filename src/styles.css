@@ -6,27 +6,3 @@
 
 /*Стили для лэйатуов*/
 @import "./styles/layout.css";
-
-/*Стили для футера*/
-/* @import "./styles/footer.css"; */
-
-/*Стили для карточки события на главной*/
-/* @import "./styles/article.css"; */
-
-/*Стили для компонента камера на странице с камерами*/
-/* @import "./styles/camera.css"; */
-
-/*Стили для компонента кнопки*/
-/* @import "./styles/button.css"; */
-
-/*Стили для фильтра видео на странице с камерами*/
-/* @import "./styles/filter.css"; */
-
-/*Стили для анализатора звука видео на странице с камерами*/
-/* @import "./styles/analyzer.css"; */
-
-/*Стили для компонента range-slider на странице с камерами*/
-/* @import "./styles/slider.css"; */
-
-/*Стили для медиазапросов*/
-/* @import "./styles/amedia.css"; */

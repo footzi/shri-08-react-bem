@@ -23,28 +23,45 @@
     padding-bottom: 20px;
 }
 
-.l-cameras {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
+@media screen and (min-width: 1919px) {
+    .Page-Main {
+        max-width: 1440px;
+    }
 }
 
-.l-button-close {
-    margin-right: 15px;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 2;
+@media screen and (max-width: 1279px) {
+    .Page-Main {
+        padding-right: 20px;
+        padding-left: 20px;
+        margin-bottom: 30px;
+        margin-top: 0;
+    }
+
+    .l-title {
+        font-size: 24px;
+        line-height: 28px;
+        margin-top: 0;
+        margin-bottom: 20px;
+    }
+
+    .Page-Header {
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-bottom: 0;
+    }
+
+    .Page-Footer {
+        padding-left: 20px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-right: 20px;
+    }
 }
 
-.l-controls {
-    margin-top: 40px;
-}
-
-.l-button-close .b-button {
-    transition: .3s ease transform;
-    transform: translateX(-150%);
-}
-
-.l-button-close .b-button.is-open {
-    transform: translateX(0);
+@media screen and (min-width: 1439px) {
+    .Page-Main {
+        max-width: 1366px;
+    }
 }

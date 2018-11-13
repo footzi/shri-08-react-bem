@@ -5,8 +5,12 @@ import {mobile} from './components/Page/Page.registry/mobile';
 import {desktop} from './components/Page/Page.registry/desktop';
 import { withRegistry } from '@bem-react/di';
 
-// let Platform = '';
+let Platform = '';
 
-const Platform = withRegistry(desktop)(Page);
+if (window.innerWidth < 1280) {
+    Platform = withRegistry(desktop)(Page);
+} else {
+    Platform = withRegistry(mobile)(Page);
+}
 
 ReactDOM.render(<Platform />, document.getElementById('root'));
